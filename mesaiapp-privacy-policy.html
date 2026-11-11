@@ -26,7 +26,7 @@
 <!-- ============================== TÜRKÇE ============================== -->
 <section id="tr">
 <h1>Mesai Takip — Gizlilik Politikası</h1>
-<p class="updated">Son güncelleme: 21 Ekim 2026</p>
+<p class="updated">Son güncelleme: 11 Kasım 2026</p>
 <p class="lang-switch"><a href="#en">Read this page in English →</a></p>
 
 <p>
@@ -43,8 +43,8 @@
   girdiğiniz kayıtlar <strong>yalnızca cihazınızda</strong> saklanır ve
   sunucumuza gönderilmez. Uygulamayı silmeniz bu kayıtları da siler.
   (Kayıtlarınızı içermeyen anonim kullanım istatistikleri 3. maddede,
-  reklamlar ve abonelikler için yapılan istekler 4. ve 5. maddede
-  anlatılmıştır.)
+  reklamlar, abonelikler ve davet programı için yapılan istekler 4. ve 5.
+  maddede anlatılmıştır.)
 </p>
 
 <h2>2. Hesap açtığınızda işlenen veriler</h2>
@@ -175,9 +175,44 @@
   satılır. Ödeme bilgileriniz yalnızca Google tarafından işlenir; uygulama
   kart veya ödeme bilgilerinizi görmez ve saklamaz. Uygulama, Pro’nun
   açık olup olmadığını anlamak için aboneliğinizin durumunu Google Play’den
-  sorgular; bu bilgiyi sunucumuza göndermez. Aboneliğinizi Google Play →
-  Ödemeler ve abonelikler bölümünden yönetebilir veya iptal
-  edebilirsiniz. Hesabınızı silmek aboneliğinizi iptal etmez.
+  sorgular. Bu bilgiyi yalnızca aşağıdaki davet programı için sunucumuza
+  gönderir. Aboneliğinizi Google Play → Ödemeler ve abonelikler bölümünden
+  yönetebilir veya iptal edebilirsiniz. Hesabınızı silmek aboneliğinizi
+  iptal etmez.
+</p>
+
+<h3>Arkadaşını davet et (Android)</h3>
+<p>
+  Davet programında her telefonun bir kodu olur; arkadaşlarınız bu kodu
+  girdikçe siz Pro kazanırsınız. Programı yürütmek için uygulama,
+  geliştiricinin kendi sunucusuna (<strong>mesai.kmylabs.com</strong>)
+  bağlanır. Bir telefonun yalnızca bir kez kod girebilmesi için uygulama,
+  Android’de ilk açılışta bu sunucuya bağlanır. Sonra ödüllerinizi kontrol
+  etmek için haftada bir (sayılan arkadaşınız, davet ödülünüz ya da
+  aboneliğiniz varsa günde bir) ve davet sayfasını açtığınızda yeniden
+  bağlanır. Sunucuya şunlar gönderilir:
+</p>
+<ul>
+  <li>Android’in bu uygulamaya özel cihaz kimliğinden (ANDROID_ID) tek yönlü
+    bir özetle (hash) üretilen bir cihaz anahtarı. Kimliğin kendisi
+    gönderilmez.</li>
+  <li>Uygulamanın paket adı; arkadaş kodu girerken uygulamanın ilk yüklenme
+    zamanı ve girdiğiniz kod.</li>
+  <li>Kod girerken Google Play Integrity’nin ürettiği bir doğrulama
+    jetonu. Bu jeton, uygulamanın Google Play’den yüklendiğini ve gerçek bir
+    cihazda çalıştığını gösterir. Sunucu jetonu Google’a doğrulatır.
+    <a href="https://developer.android.com/google/play/integrity/overview">developer.android.com/google/play/integrity</a></li>
+  <li>Pro aboneliğiniz varsa Google Play satın alma jetonu. Sunucu bu
+    jetonla aboneliğinizin durumunu Google Play’den sorgular. Davetle
+    kazandığınız ödül, gün olarak değil, bir sonraki ödemenizin ertelenmesi
+    olarak verilir.</li>
+</ul>
+<p>
+  Sunucu; cihaz anahtarını ve kodunu, hangi cihazın hangi kodu girdiğini,
+  ödülleri ve varsa aboneliğin durumunu saklar. Bu bilgiler hesabınızla,
+  adınızla veya e-posta adresinizle ilişkilendirilmez. IP adresiniz
+  kaydedilmez; çok sayıda denemeyi sınırlamak için en fazla bir saat
+  bellekte tutulur.
 </p>
 
 <h2>6. Verilerinizi kimlerle paylaşıyoruz</h2>
@@ -192,6 +227,11 @@
     <a href="https://support.google.com/admob/answer/6128543">support.google.com/admob/answer/6128543</a></li>
   <li>Google Play Faturalandırma — abonelik ödemeleri.
     <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+  <li>Google Play Integrity — davet programında uygulamanın ve cihazın
+    doğrulanması.
+    <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+  <li>Geliştiricinin kendi sunucusu (mesai.kmylabs.com) — davet programı.
+    Bu sunucudaki veriler üçüncü taraflarla paylaşılmaz.</li>
 </ul>
 <p>Bunların dışında verilerinizi yalnızca yasal bir yükümlülük
   gerektirdiğinde paylaşırız.</p>
@@ -211,6 +251,8 @@
   Henüz gönderilemeyen günler cihazınızda en fazla 30 gün bekler.
   İstatistikler kimliğinize bağlı olmadığından hesap silme işlemi onları
   kapsamaz ve tek bir kişiye ait olanlar ayırt edilemez.
+  Davet programının kayıtları, bir telefonun ikinci kez kod girmesini
+  önlemek için program sürdüğü sürece saklanır.
 </p>
 
 <h2 id="hesap-silme">9. Haklarınız ve hesabınızı silme</h2>
@@ -240,7 +282,9 @@
   yoktur; altyapı yedeklerinde en fazla 30 gün kalabilir, sonra oradan da
   düşer. Reklam kimliğiniz bizde tutulmadığı için silinecek bir kaydı
   yoktur. Abonelik ve ödeme kayıtları Google Play tarafından tutulur ve
-  Google’ın kendi politikasına tabidir.
+  Google’ın kendi politikasına tabidir. Davet programının kayıtları
+  hesabınıza bağlı olmadığından hesap silme işlemi onları kapsamaz;
+  silinmelerini istiyorsanız davet kodunuzu aşağıdaki adrese yazın.
 </p>
 
 <h2>10. Çocuklar</h2>
@@ -264,7 +308,7 @@
 <!-- ============================== ENGLISH ============================== -->
 <section id="en" lang="en">
 <h1>Mesai Takip — Privacy Policy</h1>
-<p class="updated">Last updated: 21 October 2026</p>
+<p class="updated">Last updated: 11 November 2026</p>
 <p class="lang-switch"><a href="#tr">Bu sayfayı Türkçe oku →</a></p>
 
 <p>
@@ -280,7 +324,8 @@
   stored <strong>only on your device</strong> and are not sent to our
   servers. Uninstalling the app deletes them. (Anonymous usage statistics,
   which never include your records, are described in section 3; requests
-  made for ads and subscriptions in sections 4 and 5.)
+  made for ads, subscriptions and the invite programme in sections 4 and
+  5.)
 </p>
 
 <h2>2. Data processed when you have an account</h2>
@@ -402,10 +447,42 @@
   The monthly and yearly Pro subscriptions are sold through Google Play
   Billing. Your payment details are handled only by Google; the app never
   sees or stores card or payment details. The app asks Google Play for the
-  state of your subscription to know whether Pro is on, and does not send
-  it to our servers. You can manage or cancel your subscription in Google
-  Play → Payments &amp; subscriptions. Deleting your account does not cancel
-  your subscription.
+  state of your subscription to know whether Pro is on. It sends it to our
+  server only for the invite programme below. You can manage or cancel your
+  subscription in Google Play → Payments &amp; subscriptions. Deleting your
+  account does not cancel your subscription.
+</p>
+
+<h3>Invite a friend (Android)</h3>
+<p>
+  In the invite programme every phone has a code; you earn Pro as friends
+  enter it. To run it, the app connects to the developer’s own server
+  (<strong>mesai.kmylabs.com</strong>). So that a phone can enter a code only
+  once, on Android the app connects to this server when it is first opened.
+  After that it checks for your rewards once a week (once a day if friends
+  have counted for you, you have an invite reward or you subscribe) and
+  whenever you open the invite page. The server receives:
+</p>
+<ul>
+  <li>A device key made from Android’s per-app device ID (ANDROID_ID) with a
+    one-way hash. The ID itself is not sent.</li>
+  <li>The app’s package name; when you enter a friend’s code, when the app
+    was first installed and the code you entered.</li>
+  <li>When you enter a code, a verification token made by Google Play
+    Integrity. It shows that the app was installed from Google Play and runs
+    on a genuine device. The server has Google verify it.
+    <a href="https://developer.android.com/google/play/integrity/overview">developer.android.com/google/play/integrity</a></li>
+  <li>If you subscribe to Pro, the Google Play purchase token. The server
+    uses it to ask Google Play for the state of your subscription. A reward
+    you earn by inviting is then given by moving your next payment later
+    instead of as days.</li>
+</ul>
+<p>
+  The server keeps the device key and its code, which device entered which
+  code, rewards and, if any, the subscription’s state. None of this is
+  linked to your account, name or email address. Your IP address is not
+  recorded; it is held in memory for at most an hour to limit repeated
+  tries.
 </p>
 
 <h2>6. Who we share data with</h2>
@@ -419,6 +496,11 @@
     <a href="https://support.google.com/admob/answer/6128543">support.google.com/admob/answer/6128543</a></li>
   <li>Google Play Billing — subscription payments.
     <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+  <li>Google Play Integrity — verifying the app and the device in the
+    invite programme.
+    <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+  <li>The developer’s own server (mesai.kmylabs.com) — the invite
+    programme. Data on this server is not shared with third parties.</li>
 </ul>
 <p>Beyond these, we share data only when legally required.</p>
 
@@ -437,6 +519,8 @@
   Days not yet sent wait on your device for at most 30 days. As the
   statistics are not linked to you, deleting your account does not cover
   them, and those of a single person cannot be told apart.
+  Invite programme records are kept for as long as the programme runs, so
+  that a phone cannot enter a code a second time.
 </p>
 
 <h2 id="account-deletion">9. Your rights and deleting your account</h2>
@@ -467,7 +551,9 @@
   retention; infrastructure backups may hold data for up to 30 days before it
   drops out of them too. Your advertising ID is not stored by us, so there is
   nothing to delete. Subscription and payment records are kept by Google
-  Play under Google’s own policy.
+  Play under Google’s own policy. Invite programme records are not linked
+  to your account, so deleting your account does not cover them; to have
+  them deleted, write your invite code to the address below.
 </p>
 
 <h2>10. Children</h2>
